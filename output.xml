@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-26T06:39:31.884067" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/Users/home/PycharmProjects/ecommerce/test_cases/login.robot">
+<test id="s1-t1" name="Login To NopCommerce APP" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-26T06:39:32.190390" level="INFO">Opening browser 'safari' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>safari</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-26T06:39:32.190018" elapsed="1.748545"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-26T06:39:33.941029" elapsed="0.036898"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-08-26T06:39:33.978477" elapsed="0.005032"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-26T06:39:33.985449" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<arg>//input[@id='user-name']</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T06:39:33.984131" elapsed="0.422898"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-08-26T06:39:34.407980" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
+<msg time="2025-08-26T06:39:34.440341" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id='password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T06:39:34.407479" elapsed="0.224066"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-26T06:39:34.632588" level="INFO">Clicking button '//input[@id='login-button']'.</msg>
+<arg>//input[@id='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T06:39:34.632031" elapsed="0.110073"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-26T06:39:34.743100" level="INFO">Clicking button '//button[@id='react-burger-menu-btn']'.</msg>
+<arg>//button[@id='react-burger-menu-btn']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T06:39:34.742596" elapsed="0.192670"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-26T06:39:39.938771" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-26T06:39:34.935797" elapsed="5.003305"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-26T06:39:39.940295" level="INFO">Clicking link '//a[@id='logout_sidebar_link']'.</msg>
+<arg>//a[@id='logout_sidebar_link']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T06:39:39.939759" elapsed="0.067181"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-26T06:39:45.011353" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-26T06:39:40.008165" elapsed="5.003430"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-26T06:39:45.012064" elapsed="0.245198"/>
+</kw>
+<status status="PASS" start="2025-08-26T06:39:32.188701" elapsed="13.069116"/>
+</test>
+<status status="PASS" start="2025-08-26T06:39:31.887425" elapsed="13.371756"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
