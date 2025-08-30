@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 *** Variables ***
 ${URL}    https://practice.expandtesting.com/dropdown
-${BROWSER}    Safari
+${BROWSER}    chrome
 
 *** Test Cases ***
 Automate dropdown and List Box
