@@ -1,172 +1,405 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-03T04:32:10.462327" rpa="false" schemaversion="5">
-<suite id="s1" name="Keyworddemo" source="/Users/home/PycharmProjects/ecommerce/test_cases/keyworddemo.robot">
-<test id="s1-t1" name="Login to Nopcommerce app" line="9">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-04T10:02:36.598461" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Data Driven" source="/Users/home/PycharmProjects/ecommerce/test_cases/Login_Data_Driven.robot">
+<kw name="Open my browser" owner="Login_data" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:11.144221" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg time="2025-09-04T10:02:37.288394" level="INFO">Opening browser 'headlessfirefox' to base url 'https://demo.nopcommerce.com'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-03T04:32:11.143777" elapsed="3.256585"/>
+<status status="PASS" start="2025-09-04T10:02:37.288030" elapsed="6.472823"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-03T04:32:14.404914" elapsed="0.802432"/>
+<status status="PASS" start="2025-09-04T10:02:43.762506" elapsed="0.011052"/>
 </kw>
-<kw name="LoginApp">
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:15.529662" level="INFO">Page title is 'nopCommerce demo store. Home page title'.</msg>
-<arg>nopCommerce demo store. Home page title</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-09-03T04:32:15.211644" elapsed="0.318174"/>
+<status status="PASS" start="2025-09-04T10:02:37.287166" elapsed="6.486989"/>
 </kw>
+<test id="s1-t1" name="correct username and empty password" line="9">
+<kw name="Invalid login">
+<kw name="Click login link" owner="Login_data">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:15.530715" level="INFO">Clicking link '//a[@class='ico-login']'.</msg>
+<msg time="2025-09-04T10:02:43.780374" level="INFO">Clicking link '//a[@class='ico-login']'.</msg>
 <arg>//a[@class='ico-login']</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:15.530051" elapsed="0.871116"/>
+<status status="PASS" start="2025-09-04T10:02:43.779120" elapsed="1.489600"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:16.402277" level="INFO">Typing text 'john.doe@nextininnovation.com' into text field '//input[@id='Email']'.</msg>
-<arg>//input[@id='Email']</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:16.401707" elapsed="0.252489"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:16.654996" level="INFO">Typing text 'Winter#33' into text field '//input[@id='Password']'.</msg>
-<arg>//input[@id='Password']</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:16.654481" elapsed="0.142707"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:16.797696" level="INFO">Clicking button '//button[@class='button-1 login-button']'.</msg>
-<arg>//button[@class='button-1 login-button']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:16.797433" elapsed="2.048179"/>
+<status status="PASS" start="2025-09-04T10:02:43.778367" elapsed="1.490668"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-03T04:32:20.847318" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-09-04T10:02:47.271165" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-03T04:32:18.846150" elapsed="2.001517"/>
+<status status="PASS" start="2025-09-04T10:02:45.269449" elapsed="2.002005"/>
 </kw>
-<status status="PASS" start="2025-09-03T04:32:15.210678" elapsed="5.637343"/>
+<kw name="Input username" owner="Login_data">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:02:47.273325" level="INFO">Typing text 'john.doe@nextininnovation.com' into text field '//input[@id='Email']'.</msg>
+<arg>//input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:02:47.272761" elapsed="0.047076"/>
 </kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:20.849243" level="INFO">Clicking link '//a[@class='ico-logout']'.</msg>
-<arg>//a[@class='ico-logout']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:20.848638" elapsed="1.124978"/>
+<arg>${username}</arg>
+<status status="PASS" start="2025-09-04T10:02:47.271942" elapsed="0.048188"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-03T04:32:21.974125" elapsed="0.315775"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:02:49.321206" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:02:47.320355" elapsed="2.001104"/>
 </kw>
-<status status="PASS" start="2025-09-03T04:32:11.142443" elapsed="11.149093"/>
+<kw name="Input password" owner="Login_data">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:02:49.323535" level="INFO">Typing text '' into text field '//input[@id='Password']'.</msg>
+<arg>//input[@id='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:02:49.322950" elapsed="0.034694"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-09-04T10:02:49.321938" elapsed="0.035868"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:02:51.358344" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:02:49.357988" elapsed="2.000598"/>
+</kw>
+<kw name="Click login button" owner="Login_data">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:02:51.360136" level="INFO">Clicking button '//button[@class='button-1 login-button']'.</msg>
+<arg>//button[@class='button-1 login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:02:51.359701" elapsed="0.497418"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:02:51.359053" elapsed="0.498344"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:02:53.859451" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:02:51.857739" elapsed="2.001951"/>
+</kw>
+<kw name="Screenshots" owner="Login_data">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:02:53.860780" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>./Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2025-09-04T10:02:53.860901" elapsed="0.001509"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:02:53.860127" elapsed="0.002543"/>
+</kw>
+<kw name="Error message is visible" owner="Login_data">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:02:53.874676" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-04T10:02:53.863770" elapsed="0.011071"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:02:53.863060" elapsed="0.011986"/>
+</kw>
+<arg>${username}</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2025-09-04T10:02:43.776453" elapsed="10.098769"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:02:43.774651" elapsed="10.101043"/>
 </test>
-<test id="s1-t2" name="Add a desktop to cart" line="15">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:22.296552" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-03T04:32:22.295602" elapsed="3.417307"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-03T04:32:25.715233" elapsed="0.792041"/>
-</kw>
-<kw name="LoginApp">
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:26.769390" level="INFO">Page title is 'nopCommerce demo store. Home page title'.</msg>
-<arg>nopCommerce demo store. Home page title</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-09-03T04:32:26.511736" elapsed="0.257798"/>
-</kw>
+<test id="s1-t2" name="correct username and wrong password" line="10">
+<kw name="Invalid login">
+<kw name="Click login link" owner="Login_data">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:26.770089" level="INFO">Clicking link '//a[@class='ico-login']'.</msg>
+<msg time="2025-09-04T10:02:53.879459" level="INFO">Clicking link '//a[@class='ico-login']'.</msg>
 <arg>//a[@class='ico-login']</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:26.769745" elapsed="0.799751"/>
+<status status="PASS" start="2025-09-04T10:02:53.879010" elapsed="0.839127"/>
 </kw>
+<status status="PASS" start="2025-09-04T10:02:53.878337" elapsed="0.840094"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:02:56.721989" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:02:54.718982" elapsed="2.003252"/>
+</kw>
+<kw name="Input username" owner="Login_data">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:27.570766" level="INFO">Typing text 'john.doe@nextininnovation.com' into text field '//input[@id='Email']'.</msg>
+<msg time="2025-09-04T10:02:56.724547" level="INFO">Typing text 'john.doe@nextininnovation.com' into text field '//input[@id='Email']'.</msg>
 <arg>//input[@id='Email']</arg>
-<arg>${USERNAME}</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:27.570011" elapsed="0.316324"/>
+<status status="PASS" start="2025-09-04T10:02:56.723908" elapsed="0.039315"/>
 </kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-09-04T10:02:56.722682" elapsed="0.040758"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:02:58.765255" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:02:56.763747" elapsed="2.001762"/>
+</kw>
+<kw name="Input password" owner="Login_data">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:27.887183" level="INFO">Typing text 'Winter#33' into text field '//input[@id='Password']'.</msg>
+<msg time="2025-09-04T10:02:58.767274" level="INFO">Typing text 'asdf' into text field '//input[@id='Password']'.</msg>
 <arg>//input[@id='Password']</arg>
-<arg>${PASSWORD}</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:27.886659" elapsed="0.142416"/>
+<status status="PASS" start="2025-09-04T10:02:58.766690" elapsed="0.039909"/>
 </kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-09-04T10:02:58.765949" elapsed="0.040821"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:00.807657" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:02:58.806963" elapsed="2.000948"/>
+</kw>
+<kw name="Click login button" owner="Login_data">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:28.029763" level="INFO">Clicking button '//button[@class='button-1 login-button']'.</msg>
+<msg time="2025-09-04T10:03:00.809411" level="INFO">Clicking button '//button[@class='button-1 login-button']'.</msg>
 <arg>//button[@class='button-1 login-button']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:28.029411" elapsed="1.036259"/>
+<status status="PASS" start="2025-09-04T10:03:00.808994" elapsed="0.846168"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:00.808357" elapsed="0.847103"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-03T04:32:31.067606" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-09-04T10:03:03.658788" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-03T04:32:29.066070" elapsed="2.001683"/>
+<status status="PASS" start="2025-09-04T10:03:01.655822" elapsed="2.003205"/>
 </kw>
-<status status="PASS" start="2025-09-03T04:32:26.508030" elapsed="4.559875"/>
+<kw name="Screenshots" owner="Login_data">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:03.660032" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>./Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2025-09-04T10:03:03.660137" elapsed="0.001048"/>
 </kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:31.068485" level="INFO">Clicking link 'css:a[href*='/computers']'.</msg>
-<arg>css:a[href*='/computers']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:31.068205" elapsed="0.941289"/>
+<status status="PASS" start="2025-09-04T10:03:03.659456" elapsed="0.001983"/>
 </kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:32.013732" level="INFO">Clicking link '//li[@class='active last']//a[normalize-space()='Desktops']'.</msg>
-<arg>//li[@class='active last']//a[normalize-space()='Desktops']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:32.013398" elapsed="0.711437"/>
+<kw name="Error message is visible" owner="Login_data">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:03.671269" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-04T10:03:03.662457" elapsed="0.008969"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:32.727529" level="INFO">Clicking button '//button[@class='button-2 product-box-add-to-cart-button']'.</msg>
-<arg>//button[@class='button-2 product-box-add-to-cart-button']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:32.725803" elapsed="0.186772"/>
+<status status="PASS" start="2025-09-04T10:03:03.661821" elapsed="0.009824"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-03T04:32:34.914174" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-03T04:32:32.913335" elapsed="2.001105"/>
+<arg>${username}</arg>
+<arg>asdf</arg>
+<status status="PASS" start="2025-09-04T10:02:53.877461" elapsed="9.794345"/>
 </kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-03T04:32:34.915375" level="INFO">Clicking link '//a[@class='ico-logout']'.</msg>
-<arg>//a[@class='ico-logout']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-03T04:32:34.914913" elapsed="1.029986"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-03T04:32:35.945566" elapsed="0.439545"/>
-</kw>
-<status status="PASS" start="2025-09-03T04:32:22.293235" elapsed="14.092529"/>
+<status status="PASS" start="2025-09-04T10:02:53.876424" elapsed="9.795780"/>
 </test>
-<status status="PASS" start="2025-09-03T04:32:10.465847" elapsed="25.921238"/>
+<test id="s1-t3" name="incorrect username and correct password" line="11">
+<kw name="Invalid login">
+<kw name="Click login link" owner="Login_data">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:03.674970" level="INFO">Clicking link '//a[@class='ico-login']'.</msg>
+<arg>//a[@class='ico-login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:03.674595" elapsed="1.370704"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:03.674215" elapsed="1.371384"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:07.048186" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:05.045959" elapsed="2.002475"/>
+</kw>
+<kw name="Input username" owner="Login_data">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:07.050126" level="INFO">Typing text 'usernames' into text field '//input[@id='Email']'.</msg>
+<arg>//input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:07.049631" elapsed="0.021473"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-09-04T10:03:07.048877" elapsed="0.022382"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:09.072218" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:07.071434" elapsed="2.001036"/>
+</kw>
+<kw name="Input password" owner="Login_data">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:09.074223" level="INFO">Typing text 'Winter#33' into text field '//input[@id='Password']'.</msg>
+<arg>//input[@id='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:09.073716" elapsed="0.046164"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-09-04T10:03:09.072945" elapsed="0.047142"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:11.122819" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:09.120309" elapsed="2.002839"/>
+</kw>
+<kw name="Click login button" owner="Login_data">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:11.124852" level="INFO">Clicking button '//button[@class='button-1 login-button']'.</msg>
+<arg>//button[@class='button-1 login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:11.124405" elapsed="0.101027"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:11.123734" elapsed="0.101839"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:13.227732" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:11.225733" elapsed="2.002305"/>
+</kw>
+<kw name="Screenshots" owner="Login_data">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:13.228901" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>./Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2025-09-04T10:03:13.228987" elapsed="0.000768"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:13.228420" elapsed="0.001497"/>
+</kw>
+<kw name="Error message is visible" owner="Login_data">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:13.298418" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/selenium-screenshot-1.png"&gt;&lt;img src="Screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-04T10:03:13.298697" level="FAIL">Page should have contained text 'Login was unsuccessful' but did not.</msg>
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-09-04T10:03:13.230966" elapsed="0.086105">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-09-04T10:03:13.230170" elapsed="0.087158">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<arg>usernames</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2025-09-04T10:03:03.673639" elapsed="9.643836">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-09-04T10:03:03.672817" elapsed="9.645070">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</test>
+<test id="s1-t4" name="correct username and correct password" line="12">
+<kw name="Invalid login">
+<kw name="Click login link" owner="Login_data">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:13.321059" level="INFO">Clicking link '//a[@class='ico-login']'.</msg>
+<arg>//a[@class='ico-login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:13.320741" elapsed="0.820986"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:13.319814" elapsed="0.822106"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:16.143478" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:14.142325" elapsed="2.001498"/>
+</kw>
+<kw name="Input username" owner="Login_data">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:16.145776" level="INFO">Typing text 'john.doe@nextininnovation.com' into text field '//input[@id='Email']'.</msg>
+<arg>//input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:16.144842" elapsed="0.040403"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-09-04T10:03:16.144274" elapsed="0.041189"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:18.186101" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:16.185684" elapsed="2.000619"/>
+</kw>
+<kw name="Input password" owner="Login_data">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:18.187463" level="INFO">Typing text 'Winter#33' into text field '//input[@id='Password']'.</msg>
+<arg>//input[@id='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:18.187143" elapsed="0.041601"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-09-04T10:03:18.186649" elapsed="0.042267"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:20.231488" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:18.229109" elapsed="2.002830"/>
+</kw>
+<kw name="Click login button" owner="Login_data">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:20.233432" level="INFO">Clicking button '//button[@class='button-1 login-button']'.</msg>
+<arg>//button[@class='button-1 login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-04T10:03:20.233020" elapsed="0.854348"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:20.232398" elapsed="0.855240"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-04T10:03:23.090567" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-04T10:03:21.088846" elapsed="2.001962"/>
+</kw>
+<kw name="Screenshots" owner="Login_data">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:23.091989" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>./Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2025-09-04T10:03:23.092132" elapsed="0.001022"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:23.091247" elapsed="0.002161"/>
+</kw>
+<kw name="Error message is visible" owner="Login_data">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-04T10:03:23.264250" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/selenium-screenshot-2.png"&gt;&lt;img src="Screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-04T10:03:23.264489" level="FAIL">Page should have contained text 'Login was unsuccessful' but did not.</msg>
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-09-04T10:03:23.094385" elapsed="0.171272">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-09-04T10:03:23.093778" elapsed="0.172231">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2025-09-04T10:03:13.319183" elapsed="9.947010">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-09-04T10:03:13.318412" elapsed="9.948184">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</test>
+<kw name="Close browsers" owner="Login_data" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-09-04T10:03:23.268006" elapsed="1.312271"/>
+</kw>
+<status status="PASS" start="2025-09-04T10:03:23.267707" elapsed="1.312792"/>
+</kw>
+<status status="FAIL" start="2025-09-04T10:02:36.601766" elapsed="47.978833"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Keyworddemo" id="s1" pass="2" fail="0" skip="0">Keyworddemo</stat>
+<stat name="Login Data Driven" id="s1" pass="2" fail="2" skip="0">Login Data Driven</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-09-04T10:02:53.860780" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2025-09-04T10:03:03.660032" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2025-09-04T10:03:13.228901" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2025-09-04T10:03:23.091989" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
 </errors>
 </robot>

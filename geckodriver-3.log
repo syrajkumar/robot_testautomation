@@ -1,0 +1,31 @@
+1756997991216	geckodriver	INFO	Listening on 127.0.0.1:57163
+1756997991242	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/ht/2mn88ptx5dqcflwlnjnz6y100000gn/T/rust_mozprofilekkR7Wr"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756997992784	Marionette	INFO	Marionette enabled
+1756997993128	Marionette	INFO	Listening on port 57175
+Read port: 57175
+WebDriver BiDi listening on ws://127.0.0.1:57164
+2025-09-04 09:59:53.155 plugin-container[3072:77825] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-09-04 09:59:53.156 plugin-container[3072:77825] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-09-04 09:59:53.245 plugin-container[3072:77825] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-09-04 09:59:53.245 plugin-container[3072:77825] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-09-04 09:59:53.246 plugin-container[3072:77828] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-09-04 09:59:53.246 plugin-container[3072:77828] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1756997993440	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2025-09-04 14:59:55.655 plugin-container[3076:78003] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-09-04 14:59:55.655 plugin-container[3076:78003] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-09-04 14:59:55.707 plugin-container[3076:78003] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-09-04 14:59:55.707 plugin-container[3076:78003] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2025-09-04 14:59:55.708 plugin-container[3076:78009] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2025-09-04 14:59:55.708 plugin-container[3076:78009] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
+console.error: [Exception... "Component is not available"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "<unknown>"  data: no]
+console.error: [Exception... "Component is not available"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "<unknown>"  data: no]
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+1756998007353	Marionette	INFO	Stopped listening on port 57175
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
