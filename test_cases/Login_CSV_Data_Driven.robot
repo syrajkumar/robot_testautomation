@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../Resources/Login_data.robot
-Library    DataDriver    ../Test_data/Login_data.xlsx    Sheet_name=Sheet1
+Library    DataDriver    ../Test_data/Login_data.csv
 Suite Setup    Open My Browser
 Suite Teardown    Close Browsers
 Test Template    Invalid Login

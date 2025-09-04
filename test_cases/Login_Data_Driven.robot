@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../Resources/Login_data.robot
-Library    Screenshot    screenshot_directory=../Screenshots
 Suite Setup    Open My Browser    
 Suite Teardown    Close Browsers
 Test Template    Invalid Login
@@ -23,6 +22,8 @@ Invalid login
     Click Login Button
     Sleep    2s
     Screenshots
-    Error Message Should Be Visible
+    Error Message Is Visible
+
+
 
     
